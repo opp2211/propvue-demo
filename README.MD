@@ -1,3 +1,9 @@
+# Тестовое задание от PropVue LLC
+Задание выполнено на стеке: Java 17, Spring (Boot, Web, Data), Gradle(Kotlin), 
+Postgres, Liquibase, JUnit 5, Lombok, Mapstruct.
+
+Приложение, а также БД для него помещены в докер, запуск осуществляется через docker-compose. Слой данных реализован через Spring Data JPA, один компонент через Criteria API. 
+
 ## Запуск проекта
 Выполнить в терминале следующие команды:
 1) `./gradlew bootJar`  
