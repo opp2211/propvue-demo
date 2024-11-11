@@ -59,7 +59,7 @@ public class ProductController {
     @GetMapping
     public List<ProductResponseDto> getAll(
             @Parameter(description = "Статус продуктов, допустимо NULL (выгрузка всех)")
-            @RequestParam(required = false) ProductStatus status) { //todo check null and invalid
+            @RequestParam(required = false) ProductStatus status) {
         return productService.getAll(status);
     }
 
@@ -83,7 +83,7 @@ public class ProductController {
     @Operation(summary = "Получение общего значения",
             description = "Позволяет суммарную стоимость всех продуктов, а также по статусу и/или центру выполнения"
     )
-    @GetMapping("/total-value") //todo MethodArgumentTypeMismatchException if invalid status
+    @GetMapping("/total-value")
     public BigDecimal getTotalValueOfProducts(
             @Parameter(description = "Статус продукта, допустимо NULL (не фильтровать по статусу)")
             @RequestParam(required = false)
