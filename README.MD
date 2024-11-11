@@ -5,3 +5,7 @@
 ### Доступные эндпоинты описаны в документации swagger:
 http://localhost:8080/swagger-ui/index.html
 
+#### При запуске через среду разработки добавить переменные среды: 
+`DB_HOST=localhost;DB_PORT=5432;DB_NAME=propvue;POSTGRES_USER=user;POSTGRES_password=password`
+
+_P.S. Чувствительные данные умышленно добавлены в репозиторий_
