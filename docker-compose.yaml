@@ -1,6 +1,6 @@
 version: '3'
 services:
-  master_postgres:
+  db:
     image: postgres:latest
     environment:
       - POSTGRES_USER=user
@@ -8,3 +8,15 @@ services:
       - POSTGRES_DB=propvue
     ports:
       - '5432:5432'
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - DB_NAME=propvue
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - DB_HOST=db
+      - DB_PORT=5432
