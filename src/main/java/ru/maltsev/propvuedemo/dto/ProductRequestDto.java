@@ -17,6 +17,9 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class ProductRequestDto {
 
+    @NotBlank
+    private String name;
+
     @NotNull
     private ProductStatus status;
 
@@ -29,5 +32,5 @@ public class ProductRequestDto {
 
     @NotNull
     @Positive
-    private BigDecimal value;
+    private BigDecimal price;
 }

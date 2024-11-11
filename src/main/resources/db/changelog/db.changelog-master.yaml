@@ -1,3 +1,5 @@
 databaseChangeLog:
   - include:
       file: db/changelog/changeset/product_V001__initial.sql
+  - include:
+      file: db/changelog/changeset/product_V002__inserts.sql

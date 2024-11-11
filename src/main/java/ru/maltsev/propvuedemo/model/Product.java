@@ -26,6 +26,8 @@ public class Product {
     @Column(name = "id")
     private Long productId;
 
+    private String name;
+
     @Enumerated(value = EnumType.STRING)
     private ProductStatus status;
 
@@ -34,5 +36,5 @@ public class Product {
 
     private int quantity;
 
-    private BigDecimal value;
+    private BigDecimal price;
 }

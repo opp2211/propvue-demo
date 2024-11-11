@@ -37,7 +37,7 @@ public class CustomProductRepositoryImpl implements CustomProductRepository {
         criteriaQuery.select(
                 criteriaBuilder.sum(
                         criteriaBuilder.prod(
-                                productRoot.get("quantity"), productRoot.get("value"))));
+                                productRoot.get("quantity"), productRoot.get("price"))));
         criteriaQuery.where(predicates.toArray(Predicate[]::new));
 
         return em.createQuery(criteriaQuery).getSingleResult();

@@ -7,7 +7,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
     username: ${POSTGRES_USER}
-    password: ${POSTGRES_password}
+    password: ${POSTGRES_PASSWORD}
   jackson:
     mapper:
       accept-case-insensitive-enums: true
